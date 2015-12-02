@@ -1,0 +1,38 @@
+easy_admin:
+    entities:
+        Usuarios:
+            list:
+                - { name: 'delete', type: 'method', icon: 'plus-square' }
+            label: 'Usuarios'
+            class: US21\FarmaSaludBundle\Entity\User
+        Ubicacion:
+            label: 'Ubicacion'
+            class: US21\FarmaSaludBundle\Entity\Sucursal
+        Stock:
+            label: 'Stock'
+            class: US21\FarmaSaludBundle\Entity\Stock
+        Producto:
+            label: 'Producto'
+            class: US21\FarmaSaludBundle\Entity\Producto
+        Medicamento:
+            label: 'Medicamento'
+            class: US21\FarmaSaludBundle\Entity\Medicamento
+        Proveedor:
+            label: 'Proveedor'
+            class: US21\FarmaSaludBundle\Entity\Proveedor
+            list:
+                fields:
+                    - 'id'
+                    - 'nombre'
+                    - { property: 'razonSocial', label: 'Razón Social' }
+                    - { property: 'cuit', label: 'C.U.I.T/C.U.I.L' }
+                    - { property: 'telefono', label: 'Teléfono' }
+            new:
+                title:  'Agregar Proveedor'
+                fields:
+                    - 'nombre'
+                    - { property: 'razonSocial', label: 'Razón Social' }
+                    - { property: 'cuit', label: 'C.U.I.T/C.U.I.L' }
+                    - { property: 'telefono', label: 'Teléfono' }
+                    - { property: 'direccion', label: 'Dirección' }
+    site_name: 'FarmaSalud'
